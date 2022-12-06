@@ -5,33 +5,34 @@ window.onload = () => {
 
 //Allgemeine Funktionen fürs zeigen/verstecken von Buttons/Bilder mit automatischem Scroller (Grid und Flex optionen)
 
-function hideScrollFlex(e) {
-  if (e.style.display === "none") {
-    e.style.display = "flex";
-  } else {
-    e.style.display = "none";
-  };
+  function hideScrollFlex(e) {
+    if (e.style.display === "flex") {
+      e.style.display = "none";
+    } else {
+      e.style.display = "flex";
+    }
 
-  window.scrollBy(0, window.innerHeight);
-};
-
-function hideScrollGrid(e) {
-  if (e.style.display === "none") {
-    e.style.display = "grid";
-  } else {
-    e.style.display = "none";
-  };
-
-  window.scrollBy(0, window.innerHeight);
-};
-
-
-/* TASK!!! ------------------herausfinden wie es möglich ist, nach dem scrolltop noch alle display States zum initial State (none) zu machen */
-function backToTop(...el) {
-  if (el.style.display === "flex" || el.style.display === "grid"){
-    el.style.display === "none"
+    window.scrollBy(0, window.innerHeight);
   }
-}
+
+  function hideScrollGrid(e) {
+    if (e.style.display === "grid") {
+      e.style.display = "none";
+    } else {
+      e.style.display = "grid";
+    }
+
+    window.scrollBy(0, window.innerHeight);
+  }
+
+  /*Funktion um alle Sektionen wieder zu verstecken */
+  function backToTop(...elements) {
+    elements.forEach(function (el) {
+      if (el.style.display === "flex" || el.style.display === "grid") {
+        return (el.style.display = "none");
+      }
+    });
+  }
 
 
 
