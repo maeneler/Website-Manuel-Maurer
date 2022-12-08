@@ -119,23 +119,23 @@ h2{
 }
 
 .season1 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
     height: 100vh;
     background: linear-gradient(#5C211E, #dc1006);
     }
 
 .season1 .header,
-.season1 .infos,
 .season1 .stats,
 .season1 .image,
 .season1 .next {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+}
+
+.season1 .content {
+    display: flex;
+    justify-content: space-around;
 }
 
 h3{
@@ -144,26 +144,16 @@ h3{
 }
     
 .season1 .header{ 
-    grid-area: 1 / 1 / 2 / 3;
     justify-content: space-between;           
 }
 
 .season1 .stats { 
-    grid-area: 2 / 1 / 4 / 2; 
     font-size: 16px;   
 }
-
-.season1 .image {
-    grid-area: 2 / 2 / 4 / 3;    
-}
-
 .season1 .image img {
     border-radius: 50%;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
-.season1 .next { 
-    grid-area: 4 / 1 / 5 / 3;    
- }
  
 #nextseason1, #nextseason2, #nextseason3, #nextseason4, #nextseason5, #nextseason6, #nextseason7, #nextseason8, #nextseason9, #backhome {
     background-color: #000000;
@@ -177,13 +167,8 @@ h3{
 }
 
 .season2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
     height: 100vh;
-    background: linear-gradient(#5C211E, #dc1006);
+    background: linear-gradient(#5C211E, #dc1006);    
     }
 
 .vipers{
@@ -192,42 +177,39 @@ h3{
 }
 
 .season2 .header,
-.season2 .infos,
 .season2 .stats,
 .season2 .image,
 .season2 .next {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+}
+
+.season2 .content {
+    display: flex;
+    justify-content: space-around;
 }
    
 .season2 .header { 
-    grid-area: 1 / 1 / 2 / 3;
     justify-content: space-between;           
 }
 
 .season2 .stats { 
-    grid-area: 2 / 2 / 4 / 3; 
     font-size: 16px;        
-}
-.season2 .image {
-    grid-area: 2 / 1 / 4 / 2;    
 }
 
 .season2 .image img{
     border-radius: 50%;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
-.season2 .next { 
-    grid-area: 4 / 1 / 5 / 3;    
- }
 
 /* ------------------------Flipping Card Part*------------------------------------------------*/
 
 .card {
     width: 500px;
     height: 200px;
-    perspective: 1000px;    
+    perspective: 1000px;        
   }
   
   .card__inner {
@@ -236,7 +218,7 @@ h3{
     transition: transform 1s;
     transform-style: preserve-3d;
     cursor: pointer;
-    position: relative;
+    position: relative;    
   }
 
   .card__inner:hover{
@@ -265,6 +247,7 @@ h3{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
   }
 
   .card__face--front.vaxjo,
@@ -274,7 +257,7 @@ h3{
 
   .card__face--front p,
   .card__face--back ul {
-    padding: 25px;
+    padding: 15px;
     margin: 5px;
   }
   
@@ -284,14 +267,70 @@ h3{
     font-size: 28px;
     margin-top: 5px;
   }
-
-  .card__face--front.vaxjo h4,
-  .card__face--back.vaxjo h4{
-    color: #000000;
-  }
-
-  
+   
   .card__face--back {
     transform: rotateX(180deg);
   }
    
+
+  /*-------------------Responsive Design für Smartphones ---------------------------------*/
+
+  @media screen and (max-width: 480px){
+    main .buttons{
+        flex-direction: column;
+    }
+
+    main .btn{
+        margin: 15px;
+    }
+
+    .choices {
+        flex-direction: column;
+    }
+
+    .club, .nati {
+        margin: 15px;
+    }
+
+    .season1,
+    .season2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;        
+    }
+
+    .season1 .header img,
+    .season2 .header img{
+        display: none;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .season1 .content,
+    .season2 .content {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 300px;
+        height: 150px;
+    }
+
+    .card__face--front h4,
+    .card__face--back h4 {
+        font-size: 16px;
+    }
+
+    .card__face--front p,
+    .card__face--back p,
+    .card__face--back ul{
+        font-size: 12px;
+        padding: 5px;
+    }
+
+
+
+  }
