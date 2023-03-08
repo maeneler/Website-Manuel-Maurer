@@ -1,4 +1,6 @@
 window.onload = () => {
+
+
   /* ---------------Funktion fürs togglen des Sport-Contents------------------------*/
 
   //Allgemeine Funktionen fürs zeigen/verstecken von Buttons/Bilder mit automatischem Scroller (Grid und Flex optionen)
@@ -27,7 +29,7 @@ window.onload = () => {
   function backToTop(...elements) {
     elements.forEach(function (el) {
       if (el.style.display === "flex" || el.style.display === "grid") {
-        return (el.style.display = "none");
+       el.style.display = "none";
       }
     });
   }
@@ -135,3 +137,17 @@ window.onload = () => {
     });
   });
 };
+
+/*------------------------- let hoverevent work by touching ---------------------------*/
+
+workbutton.onclick = function() {
+  workbutton.onhover.call(workbutton)
+}
+
+codingButton.onclick = function(){
+  codingButton.onhover.call(codingButton)
+}
+
+nati.onclick = function(){
+  nati.onhover.call(nati)
+}
