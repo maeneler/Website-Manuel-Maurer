@@ -144,10 +144,22 @@ workbutton.onclick = function() {
   workbutton.onhover.call(workbutton)
 }
 
+workbutton.ontouchstart = function(){
+  workbutton.onhover.call(workbutton)
+}
+
 codingButton.onclick = function(){
   codingButton.onhover.call(codingButton)
 }
 
+codingButton.ontouchstart = function(){
+  codingButton.onhover.call(codingButton)
+}
+
 nati.onclick = function(){
+  nati.onhover.call(nati)
+}
+
+nati.ontouchstart = function(){
   nati.onhover.call(nati)
 }
