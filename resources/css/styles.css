@@ -326,21 +326,32 @@ h3{
     main .btn{
         margin: 15px;
     }
+    .overview{
+        height: 100vh;
+    }
+
+    .overview h2{
+        font-size: 18px;
+    }
 
     .choices {
-        height: 100vh;
         flex-direction: column;
         justify-content: center;
     }
 
+    .choices p{
+        margin-top: -5px;
+        font-size: 14px;
+    }
+
     .club,
     .nati {
-        margin: 15px;
+        margin: 0 15px;
     }
 
     .choices img{
         width: auto;
-        height: 10rem;
+        height: 100px;
     }
 
     .season1,
@@ -380,5 +391,10 @@ h3{
     .card__face--back ul{
         font-size: 12px;
         padding: 5px;
+    }
+
+    .image img{
+        height: 120px;
+        width: auto;
     }
   }
