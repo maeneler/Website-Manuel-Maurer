@@ -17,7 +17,7 @@
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
-  
+
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
@@ -33,7 +33,6 @@
 main {
     background: linear-gradient(#414141, #000000);
     height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,9 +44,16 @@ main {
     text-align: center;
 }
 
+.maurer .p{
+    padding: 0 25px;
+}
 img{
     border-radius: 15px;
-    margin: 10px
+    margin: 10px;
+    width: 30%;
+    height: auto;
+    min-height: 300px;
+    min-width: 225px;
 }
 
 .buttons{
@@ -101,7 +107,7 @@ img{
     cursor: pointer;
 }
 
-/* ------------------------- hide content --------------------------------------------*/
+/* ------------------------- Content verstecken---------------------------------------------*/
 
 #options, #part1, #part2, #part3, #part4, #part5, #part6, #part7, #part8, #part9, #part10 {
     display: none;
@@ -177,19 +183,19 @@ h3{
     font-size: 32px;
     font-weight: 600;
 }
-    
-.season1 .header{ 
-    justify-content: space-between;           
+
+.season1 .header{
+    justify-content: space-between;
 }
 
-.season1 .stats { 
-    font-size: 16px;   
+.season1 .stats {
+    font-size: 16px;
 }
 .season1 .image img {
     border-radius: 50%;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
- 
+
 #nextseason1, #nextseason2, #nextseason3, #nextseason4, #nextseason5, #nextseason6, #nextseason7, #nextseason8, #nextseason9, #backhome {
     background-color: #000000;
     color: white;
@@ -204,7 +210,7 @@ h3{
 .season2 {
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);;
-    background: linear-gradient(#5C211E, #dc1006);    
+    background: linear-gradient(#5C211E, #dc1006);
     }
 
 .vipers{
@@ -226,13 +232,13 @@ h3{
     display: flex;
     justify-content: space-around;
 }
-   
-.season2 .header { 
-    justify-content: space-between;           
+
+.season2 .header {
+    justify-content: space-between;
 }
 
-.season2 .stats { 
-    font-size: 16px;        
+.season2 .stats {
+    font-size: 16px;
 }
 
 .season2 .image img{
@@ -245,26 +251,26 @@ h3{
 .card {
     width: 500px;
     height: 200px;
-    perspective: 1000px;        
+    perspective: 1000px;
   }
-  
+
   .card__inner {
     width: 100%;
     height: 100%;
     transition: transform 1s;
     transform-style: preserve-3d;
     cursor: pointer;
-    position: relative;    
+    position: relative;
   }
 
   .card__inner:hover{
     transform: scale(1.05);
   }
-  
+
   .card__inner.is-flipped {
     transform: rotateX(180deg);
-  }  
-  
+  }
+
   .card__face {
     position: absolute;
     width: 100%;
@@ -275,7 +281,7 @@ h3{
     border-radius: 16px;
     box-shadow: 0px 2px 15px 2px rgba(255, 255, 255, 0.2);
   }
-  
+
   .card__face--front,
   .card__face--back {
     background-image: linear-gradient(to bottom right, #dc1006, #5C211E);
@@ -283,7 +289,7 @@ h3{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
   }
 
   .card__face--front.vaxjo,
@@ -296,20 +302,20 @@ h3{
     padding: 15px;
     margin: 5px;
   }
-  
+
   .card__face--front h4,
   .card__face--back h4 {
     color: #FFF;
     font-size: 28px;
     margin-top: 5px;
   }
-   
+
   .card__face--back {
     transform: rotateX(180deg);
   }
-   
 
-  /*-------------------media queries ---------------------------------*/
+
+  /*-------------------Responsive Design für Smartphones ---------------------------------*/
 
   @media (max-width: 520px){
 
@@ -325,7 +331,7 @@ h3{
         height: 100vh;
         flex-direction: column;
         justify-content: center;
-    }  
+    }
 
     .club,
     .nati {
@@ -341,7 +347,7 @@ h3{
     .season2 {
         display: flex;
         flex-direction: column;
-        justify-content: center;        
+        justify-content: center;
     }
 
     .season1 .header img,
@@ -375,7 +381,4 @@ h3{
         font-size: 12px;
         padding: 5px;
     }
-
-
-
   }
