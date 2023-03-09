@@ -30,6 +30,10 @@
 
 /* ------------------------------Homepage part----------------------------------------------*/
 
+body{
+    min-height: -webkit-fill-available;
+}
+
 main {
     background: linear-gradient(#414141, #000000);
     height: 100vh;
@@ -47,7 +51,7 @@ main {
 .maurer .p{
     padding: 0 25px;
 }
-img{
+.maurer img{
     border-radius: 15px;
     margin: 10px;
     width: 30%;
@@ -145,6 +149,7 @@ h2{
 .choices img{
     width: 100%;
     height: auto;
+    border-radius: 15px;
 }
 
 #choice2{
@@ -317,22 +322,13 @@ h3{
 
   /*-------------------Responsive Design für Smartphones ---------------------------------*/
 
-  @media (max-width: 520px){
-
-    body{
-        min-height: 100vh;
-        min-height: -webkit-fill-available;
-    }
-
+  @media screen and (max-width: 560px){
     main .buttons{
         flex-direction: column;
     }
 
     main .btn{
         margin: 15px;
-    }
-    .overview{
-        height: 100vh;
     }
 
     .overview h2{
@@ -345,7 +341,7 @@ h3{
     }
 
     .choices p{
-        margin-top: -5px;
+        margin-bottom: 15px;
         font-size: 14px;
     }
 
@@ -356,7 +352,8 @@ h3{
 
     .choices img{
         width: auto;
-        height: 100px;
+        height: 170px;
+
     }
 
     .season1,
@@ -377,7 +374,7 @@ h3{
 
     .season1 .content,
     .season2 .content {
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
     }
 
@@ -399,7 +396,8 @@ h3{
     }
 
     .image img{
-        height: 120px;
+        height: 150px;
         width: auto;
     }
   }
+
