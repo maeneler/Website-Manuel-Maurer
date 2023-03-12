@@ -8,9 +8,9 @@
 
 /* ------------------------------tooltip class for buttons/ links that are empty atm----------------------------------------------*/
 
- .btn .tooltiptext,
- #choice2 .tooltiptext {
-    visibility: hidden;
+ .tooltiptext:hover::after,
+ .tooltiptext:focus::after{
+    content: 'under construction';
     width: 120px;
     background-color: red;
     color: #fff;
@@ -20,14 +20,10 @@
 
     /* Position the tooltip */
     position: absolute;
+    top: 0px;
+    left: 70%;
     z-index: 1;
   }
-
-  .btn:hover .tooltiptext,
-  #choice2:hover .tooltiptext {
-    visibility: visible;
-  }
-
 /* ------------------------------Homepage part----------------------------------------------*/
 
 body{
