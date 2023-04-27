@@ -24,6 +24,7 @@
     left: 70%;
     z-index: 1;
   }
+
 /* ------------------------------Homepage part----------------------------------------------*/
 
 body{
@@ -50,7 +51,7 @@ main {
 .maurer img{
     border-radius: 15px;
     margin: 10px;
-    width: 30%;
+    width: 20%;
     height: auto;
     min-height: 300px;
     min-width: 225px;
@@ -67,6 +68,10 @@ main {
     text-align: center;
     width: 150px;
     border-radius: 15px;
+    position: relative;
+    border: none;
+    font-size: inherit;
+    color: inherit;
 }
 
 #button1{
@@ -319,10 +324,11 @@ h3{
   @media screen and (max-width: 560px){
     main .buttons{
         flex-direction: column;
+
     }
 
     main .btn{
-        margin: 15px;
+        margin: 5px;
     }
 
     .overview h2{
